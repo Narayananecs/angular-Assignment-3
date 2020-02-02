@@ -1,0 +1,10 @@
+<hello name="{{ name }}"></hello>
+<button (click)="logValues()">Display Details</button>
+<p  *ngIf="showPara" >
+  Toggle text
+</p>
+<div  *ngFor = "let values of logger" 
+[ngStyle]="{backgroundColor : logger.length >= 4 ? 'blue' : 'white'}"
+[ngClass]= "{'white-text' : logger.length >= 4}"> 
+{{values}}
+</div>
